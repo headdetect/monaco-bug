@@ -6,7 +6,20 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
 
-  public code: string = 'code code';
+  public code = 'body { }';
+
+  public visible = true;
+
+  /**
+   * This part isn't important. Just needed to refresh the component somehow
+   */
+  reload() {
+    this.visible = false;
+
+    const timer = setTimeout(() => {
+      this.visible = true;
+      clearTimeout(timer);
+    }, 1000);
+  }
 }

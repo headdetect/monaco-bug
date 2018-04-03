@@ -1,4 +1,5 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<ngx-monaco-editor [options]="{language: 'css', automaticLayout: true}" [(ngModel)]="code"></ngx-monaco-editor>
+<ngx-monaco-editor [options]="{language: 'css', automaticLayout: true}" [(ngModel)]="code" *ngIf="visible"></ngx-monaco-editor>
 
 
+<button (click)="reload()">Reload</button>
