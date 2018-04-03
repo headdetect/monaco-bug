@@ -3,6 +3,9 @@ import { NgModule } from '@angular/core';
 
 
 import { AppComponent } from './app.component';
+import {FormsModule} from '@angular/forms';
+import {CommonModule} from '@angular/common';
+import {MonacoEditorModule} from 'ngx-monaco-editor';
 
 
 @NgModule({
@@ -10,7 +13,11 @@ import { AppComponent } from './app.component';
     AppComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule,
+    CommonModule,
+
+    MonacoEditorModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
